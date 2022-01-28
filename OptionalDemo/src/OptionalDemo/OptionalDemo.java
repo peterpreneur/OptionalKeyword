@@ -30,8 +30,5 @@ public class OptionalDemo {
 		
 		//profile.getHobbies().ifPresent(hobbies -> System.out.println("Hobbies: " + hobbies));
 		System.out.println(" ");
-			
-
 	}
-
 }
