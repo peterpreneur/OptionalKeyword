@@ -21,12 +21,16 @@ public class OptionalDemo {
 
 	private static void outputProfile(Profile profile) {
 		System.out.println("First Name: " + profile.getFirstName().trim());
-
+		
 		profile.getMiddleName().ifPresent(middleName -> System.out.println("Middle Name: " + middleName));
 		
 		System.out.println("Last Name: " + profile.getLastName().trim());
 		
-		profile.getHobbies().ifPresent(hobbies -> System.out.println("Hobbies: " + hobbies));
+		System.out.println("Hobbies: " + profile.getHobbies().orElse("no hobbies listed"));
+		
+		//profile.getHobbies().ifPresent(hobbies -> System.out.println("Hobbies: " + hobbies));
+		System.out.println(" ");
+			
 
 	}
 
