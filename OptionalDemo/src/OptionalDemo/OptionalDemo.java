@@ -26,6 +26,8 @@ public class OptionalDemo {
 		
 		System.out.println("Last Name: " + profile.getLastName().trim());
 		
+		profile.getFullName().ifPresent(fullName -> System.out.println("Full name: " + fullName));
+		
 		System.out.println("Hobbies: " + profile.getHobbies().orElse("no hobbies listed"));
 		
 		//profile.getHobbies().ifPresent(hobbies -> System.out.println("Hobbies: " + hobbies));

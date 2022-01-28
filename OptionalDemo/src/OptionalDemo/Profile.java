@@ -8,13 +8,13 @@ public class Profile {
 	private String firstName;
 	private Optional<String> middleName = Optional.empty();
 	private String lastName;
+	private Optional<String> fullName = Optional.ofNullable(firstName);
 	private Optional<String> hobbies = Optional.empty();
-	
-	private List<String> friends = new ArrayList<>();
-	
+		
 	public Profile(String firstName, String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
+		this.setFullName(Optional.ofNullable(firstName));
 	}
 		
 	public String getFirstName() {
@@ -51,6 +51,14 @@ public class Profile {
 	public String toString() {
 		return "Profile [firstName=" + firstName + ", middleName=" + middleName + ", lastName=" + lastName
 				+ ", hobbies=" + hobbies + "]";
+	}
+
+	public Optional<String> getFullName() {
+		return fullName;
+	}
+
+	public void setFullName(Optional<String> fullName) {
+		this.fullName = fullName;
 	}
 	
 }
